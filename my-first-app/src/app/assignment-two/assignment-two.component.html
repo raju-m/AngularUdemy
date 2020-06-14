@@ -1,0 +1,10 @@
+<p>assignment-two works!</p>
+
+<button class="btn btn-primary" (click)="toggleParagraphVisility()">Display Details</button>
+<p *ngIf="paragraphVisibility">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+</p>
+<div *ngFor="let count of clickCounter"
+[ngStyle]="{backgroundColor:count>=5?'blue':'white'}"
+[ngClass]="{whiteText:count>=5}"
+>{{count}}</div>

@@ -1,0 +1,36 @@
+<div class="container" style="margin-top: 50px;">
+  <div class="row">
+    <div class="col-md-12">
+      <p appBasicHighlight>This is from custom directive</p>
+      <p appBetterHighlight [defaultColor]="'red'" [highlightColor]="'orange'">This is from custom better directive</p>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let number of numbers;">{{number}}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <p *appUnless="isHome">Display this content</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div [ngSwitch]="value">
+        <p *ngSwitchCase="5">Value 5</p>
+        <p *ngSwitchCase="6">Value 6</p>
+        <p *ngSwitchCase="7">Value 7</p>
+        <p *ngSwitchDefault>Value is Default</p>
+      </div>
+    </div>
+  </div>
+  <p>
+    <input type="text" appRainbow>
+  </p>
+</div>
+
+
+
+
+

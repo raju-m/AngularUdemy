@@ -1,0 +1,20 @@
+<div class="container" style="margin-top: 20px;">
+  <div class="row">
+    <div class="col-md-12">Add new Server and blueprints!</div>
+  </div>
+  <hr>
+  
+  <app-cockpit 
+  (serverCreated)="onServerAdded($event)"
+  (blueprintCreated)="onBlueprintAdded($event)"
+  ></app-cockpit>
+
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <app-server-element *ngFor="let element of serverElements" [modelType]="element">
+        <p #contentParagraph [ngClass]="{server:element.type=='server',blueprint:element.type=='blueprint'}">{{element.content}}</p>
+      </app-server-element>
+    </div>
+  </div>
+</div>

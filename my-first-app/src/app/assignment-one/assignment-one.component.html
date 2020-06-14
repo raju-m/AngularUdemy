@@ -1,0 +1,18 @@
+<p>assignment-one works!</p>
+<label>Username</label>
+<div class="row">
+    <div class="col-md-12">
+        <input type="text" class="form-control" [(ngModel)]="username">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <p>Username: {{username}}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <button type="button" class="btn btn-primary" [disabled]="(username==='')" (click)="onResetClick()">Reset</button>
+    </div>
+</div>
+<br>

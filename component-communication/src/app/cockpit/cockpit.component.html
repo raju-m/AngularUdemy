@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-md-12">
+        <label for="servername">Server Name</label>
+        <!-- <input type="text" class="form-control" [(ngModel)]="serverName"> -->
+        <input type="text" class="form-control" #serverInputName>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <label for="servername">Server Content</label>
+        <!-- <input type="text" class="form-control" [(ngModel)]="serverContent"> -->
+        <input type="text" class="form-control" #serverContentInput>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-12">
+        <div class="btn-group" role="group" aria-label="...">
+            <button class="btn btn-primary" (click)="addServer(serverInputName)">Add Server</button>
+            <button class="btn btn-primary" (click)="addServerBlueprint(serverInputName)">Add Server Blueprint</button>
+        </div>
+    </div>
+</div>
